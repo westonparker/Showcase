@@ -1,2 +1,2 @@
 # Showcase
-Weston Parker's Showcase, including some data scripting and visualizations
+Weston Parker's Showcase, including some of my most recent data scripting and visualizations
