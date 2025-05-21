@@ -1,3 +1,8 @@
+# THIS APPLICATION HAS BEEN UPDATED AND DEPLOYED, CAN BE FOUND AT THIS URL:
+# https://quick-insight.streamlit.app/
+# THANKS
+
+
 import dearpygui.dearpygui as dpg
 import pandas as pd
 import numpy as np
