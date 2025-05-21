@@ -28,11 +28,6 @@ def detect_date_columns(df):
     return list(set(likely_date_cols))
 
 
-#On boot up - hopefully
-placeholder = st.empty()
-placeholder.info("App may take a few seconds to wake up if idle. Thanks for your patience.")
-time.sleep(2)
-placeholder.empty()
 
 # user options
 
@@ -765,7 +760,7 @@ def compare_loss_categories(data):
 
 
 def run_general_insight(data, user_prompt=None):
-    st.subheader("AI-Powered Data Insight")
+    st.subheader("Analysis (Powered by AI, may take a second to load):")
 
     sample_data = data.head(200).to_csv(index=False)
 
@@ -802,7 +797,7 @@ def run_general_insight(data, user_prompt=None):
 
 #main function
 
-st.title("Excel Data Analyzer")
+st.title("Quick Insight: AI Powered Data Analysis Tool")
 
 uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx", "xls"])
 
