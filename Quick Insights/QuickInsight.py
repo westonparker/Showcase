@@ -73,7 +73,7 @@ def track_sales_over_time(data):
     st.pyplot(fig)
     st.subheader("Analysis (Powered by AI, may take a couple of seconds to load):")
 
-    sample_data = data[[x_col] + y_cols].head(20).to_csv(index=False)
+    sample_data = data[[x_col] + y_cols].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded sales data.
@@ -88,7 +88,7 @@ def track_sales_over_time(data):
     "The Data provided is not dense enough to give a full conclusion, if you could provide more data, this application will
     perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -136,7 +136,7 @@ def compare_products_or_regions(data):
 
     st.subheader("Analysis (Powered by AI, may take a couple of seconds to load):")
 
-    sample_data = data[[category_col] + y_cols].head(20).to_csv(index=False)
+    sample_data = data[[category_col] + y_cols].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded data comparing products or regions.
@@ -150,7 +150,7 @@ def compare_products_or_regions(data):
     If the data is too sparse or not conclusive enough to give a conclusion, say something along the lines of:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -205,7 +205,7 @@ def identify_sales_trends(data):
 
     st.subheader("Analysis (Powered by AI, may take a couple seconds to load):")
 
-    sample_data = data[[x_col] + y_cols].head(20).to_csv(index=False)
+    sample_data = data[[x_col] + y_cols].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded sales data and wants to understand time-based trends.
@@ -218,7 +218,6 @@ def identify_sales_trends(data):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
     {sample_data}
     """
 
@@ -275,7 +274,7 @@ def monitor_stock_levels(data):
 
     st.subheader("Analysis (Powered by AI, may take a couple seconds to load):")
 
-    sample_data = data[[x_col] + y_cols].head(20).to_csv(index=False)
+    sample_data = data[[x_col] + y_cols].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded inventory stock level data.
@@ -288,7 +287,7 @@ def monitor_stock_levels(data):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -343,7 +342,7 @@ def identify_fast_slow_items(data):
 
     st.subheader("Analysis (Powered by AI, may take a second to load):")
 
-    sample_data = data[[item_col, metric_col]].head(20).to_csv(index=False)
+    sample_data = data[[item_col, metric_col]].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded inventory movement data.
@@ -356,7 +355,7 @@ def identify_fast_slow_items(data):
     If the data is too sparse or not conclusive enough, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -430,7 +429,7 @@ def find_stockout_overstock_risks(data):
 
     st.subheader("Analysis (Powered by AI, may take a second to load):")
 
-    sample_data = latest_stock[[item_col, stock_col]].head(20).to_csv(index=False)
+    sample_data = latest_stock[[item_col, stock_col]].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded inventory stock data.
@@ -445,7 +444,7 @@ def find_stockout_overstock_risks(data):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -500,7 +499,7 @@ def analyze_profit_trends(data):
 
     st.subheader("Analysis (Powered by AI, may take a second to load):")
 
-    sample_data = data[[x_col] + y_cols].head(20).to_csv(index=False)
+    sample_data = data[[x_col] + y_cols].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded profit data over time.
@@ -513,7 +512,7 @@ def analyze_profit_trends(data):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -556,7 +555,7 @@ def compare_profit_margins(data):
 
     st.subheader("Analysis (Powered by AI, may take a second to load):")
 
-    sample_data = data[[category_col, margin_col]].head(20).to_csv(index=False)
+    sample_data = data[[category_col, margin_col]].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded data comparing profit margins across categories.
@@ -571,7 +570,7 @@ def compare_profit_margins(data):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -614,7 +613,7 @@ def breakdown_profit_by_category(data):
 
     st.subheader("Analysis (Powered by AI, may take a second to load):")
 
-    sample_data = data[[category_col, profit_col]].head(20).to_csv(index=False)
+    sample_data = data[[category_col, profit_col]].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded data showing total profit by category: "{category_col}".
@@ -627,7 +626,7 @@ def breakdown_profit_by_category(data):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -681,7 +680,7 @@ def identify_loss_patterns(data):
 
     st.subheader("Analysis (Powered by AI, may take a second to load):")
 
-    sample_data = data[[x_col] + y_cols].head(20).to_csv(index=False)
+    sample_data = data[[x_col] + y_cols].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded time-based data on financial or operational losses.
@@ -694,7 +693,7 @@ def identify_loss_patterns(data):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -737,7 +736,7 @@ def compare_loss_categories(data):
 
     st.subheader("Analysis (Powered by AI, may take a second to load):")
 
-    sample_data = data[[category_col, loss_col]].head(20).to_csv(index=False)
+    sample_data = data[[category_col, loss_col]].head(200).to_csv(index=False)
 
     prompt = f"""
     You are a data analyst. The user uploaded data showing losses grouped by category: "{category_col}".
@@ -750,7 +749,7 @@ def compare_loss_categories(data):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+
     {sample_data}
     """
 
@@ -768,8 +767,7 @@ def compare_loss_categories(data):
 def run_general_insight(data, user_prompt=None):
     st.subheader("AI-Powered Data Insight")
 
-    # Use first 20 rows of the dataframe
-    sample_data = data.head(20).to_csv(index=False)
+    sample_data = data.head(200).to_csv(index=False)
 
     # Base prompt
     base_prompt = f"""
@@ -782,7 +780,7 @@ def run_general_insight(data, user_prompt=None):
     If the data is too sparse or unclear, say:
     "The Data provided is not dense enough to give a full conclusion. If you could provide more data, this application will perform better."
 
-    Data (first 20 rows):
+    
     {sample_data}
     """
 

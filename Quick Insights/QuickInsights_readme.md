@@ -1,0 +1,1 @@
+Allows non-technical users to quickly gather insights and visualizations based on their data. 
