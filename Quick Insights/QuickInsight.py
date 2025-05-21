@@ -405,7 +405,7 @@ def find_stockout_overstock_risks(data):
     overstock_items = latest_stock[latest_stock[stock_col] >= overstock_threshold]
 
     # Step 6: Plotting
-    st.write("📉 Potential Stockouts:")
+    st.write("Potential Stockouts:")
     if stockout_items.empty:
         st.info("No items are currently below the stockout threshold.")
     else:
@@ -416,7 +416,7 @@ def find_stockout_overstock_risks(data):
         ax.set_ylabel("Stock Level")
         st.pyplot(fig)
 
-    st.write("📦 Potential Overstocks:")
+    st.write("Potential Overstocks:")
     if overstock_items.empty:
         st.info("No items are currently above the overstock threshold.")
     else:
